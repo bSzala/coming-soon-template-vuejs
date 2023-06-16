@@ -24,29 +24,7 @@
       </div>
       <div class="mt-auto text-center social-media-container">
         <a
-          v-if="facebook"
-          :href="facebook"
-          target="_blank"
-          class="text-body mx-2 my-3"
-          >Facebook</a
-        >
-        <a
-          v-if="instagram"
-          :href="instagram"
-          target="_blank"
-          class="text-body mx-2 my-3"
-          >Instagram</a
-        >
-        <a
-          v-if="youtube"
-          :href="youtube"
-          target="_blank"
-          class="text-body mx-2 my-3"
-          >YouTube</a
-        >
-        <a
-          v-if="linkedin"
-          :href="linkedin"
+          href="https://www.linkedin.com/in/bszala"
           target="_blank"
           class="text-body mx-2 my-3"
           >LinkedIn</a
@@ -63,15 +41,19 @@ export default {
     return {
       logo: require("@/assets/logo.png"),
       backgroundImage: require("@/assets/bg.jpg"),
-      title: process.env.VUE_APP_TITLE,
+      title: "Senior IT Consultant",
       disclaimer: [
-        process.env.VUE_APP_DISCLAIMER_FIRST_LINE,
-        process.env.VUE_APP_DISCLAIMER_SECOND_LINE,
+        "Full Stack Developer",
+        "Microservices",
+        "Vue.js / Quasar / Vuetify",
+        "Typescript / JavaScript / PHP",
+        "Laravel",
+        "SCRUM",
+        "AWS",
+        "GraphQL / AXIOS",
+        "Rest API",
+        "E-Commerce Solutions",
       ],
-      facebook: process.env.VUE_APP_FACEBOOK,
-      instagram: process.env.VUE_APP_INSTAGRAM,
-      youtube: process.env.VUE_APP_YOUTUBE,
-      linkedin: process.env.VUE_APP_LINKEDIN,
     };
   },
 };
