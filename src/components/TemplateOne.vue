@@ -4,9 +4,14 @@
       cols="12"
       sm="6"
       xl="8"
-      class="p-5 d-none d-sm-flex justify-content-center align-items-center background-container"
-      :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"
-    ></b-col>
+      class="d-none d-sm-flex justify-content-center align-items-center background-container"
+    >
+      <video class="bg-video" autoplay muted loop>
+        <source src="@/assets/header.mp4" type="video/mp4" />
+        <source src="@/assets/header.webm" type="video/webm" />
+        Your browser is not supported!
+      </video>
+    </b-col>
     <b-col
       cols="12"
       sm="6"
@@ -16,7 +21,7 @@
       <div class="text-center my-auto">
         <img :src="logo" alt="logo" class="img-fluid mx-auto mb-4" />
         <div class="title mb-3">{{ title }}</div>
-        <div class="disclaimer font-weight-light">
+        <div class="disclaimer">
           <vue-typed-js class="d-block" :loop="true" :strings="disclaimer">
             <span class="typing"></span>
           </vue-typed-js>
@@ -45,14 +50,14 @@ export default {
       disclaimer: [
         "Full Stack Developer",
         "Microservices",
-        "Vue.js / Quasar / Vuetify",
+        "Vue.js / Quasar / Vuetify / REACT / Laravel",
         "Typescript / JavaScript / PHP",
-        "Laravel",
         "SCRUM",
-        "AWS",
+        "Amazon AWS",
         "GraphQL / AXIOS",
         "Rest API",
         "E-Commerce Solutions",
+        "Google FireBase",
       ],
     };
   },
@@ -60,12 +65,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.bg-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 2% bottom;
+  filter: saturate(0%) blur(10px) brightness(130%);
+}
+
 .template-one {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
   }
   .disclaimer {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #003566;
   }
   .background-container {
     background-position: center center;
@@ -73,8 +89,9 @@ export default {
     box-shadow: inset 0rem 0rem 5rem rgba(0, 0, 0, 0.2) !important;
   }
   .social-media-container {
-    a {
+    & > a {
       transition: all 1s;
+      font-weight: 700;
       &:hover {
         color: gray !important;
         text-decoration: none;

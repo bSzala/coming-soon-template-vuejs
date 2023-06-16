@@ -17,7 +17,8 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+
+  color: #001d3d;
 }
 </style>
->
