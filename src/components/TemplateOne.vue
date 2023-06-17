@@ -20,7 +20,8 @@
     >
       <div class="text-center my-auto">
         <img :src="logo" alt="logo" class="img-fluid mx-auto mb-4" />
-        <div class="title mb-3">{{ title }}</div>
+        <div class="title mt-2 mb-3">{{ title }}</div>
+        <div class="title__small mb-3">{{ subtitle }}</div>
         <div class="disclaimer">
           <vue-typed-js class="d-block" :loop="true" :strings="disclaimer">
             <span class="typing"></span>
@@ -34,6 +35,12 @@
           class="text-body mx-2 my-3"
           >LinkedIn</a
         >
+        <a
+          href="mailto:info@vedevo.pl"
+          target="_blank"
+          class="text-body mx-2 my-3"
+          >info@vedevo.pl</a
+        >
       </div>
     </b-col>
   </b-row>
@@ -46,7 +53,8 @@ export default {
     return {
       logo: require("@/assets/logo.png"),
       backgroundImage: require("@/assets/bg.jpg"),
-      title: "Senior IT Consultant",
+      title: "Bartłomiej Szala",
+      subtitle: "Senior IT Consultant",
       disclaimer: [
         "Full Stack Developer",
         "Microservices",
@@ -75,8 +83,15 @@ export default {
 
 .template-one {
   .title {
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
+    line-height: 2.5rem;
+    &__small {
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
   }
   .disclaimer {
     font-size: 1.25rem;
